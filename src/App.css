@@ -4,11 +4,13 @@
   margin: 20px;
   gap: 1em; 
   align-items: center;
+  cursor: pointer;
 }
 
 .logo{
   display: flex;
   justify-content: center;
+  
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -26,15 +28,22 @@
 
 .menu-area{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  
 }
 
 .search-box{
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .search-input{
   margin-right: 5px;
+}
+
+
+.productImage{
+  display:flex;
+  justify-content: flex-end;
 }

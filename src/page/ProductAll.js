@@ -1,21 +1,27 @@
 import React, {useEffect, useState} from 'react'
 import ProductCard from '../component/ProductCard'
 import { Container , Row, Col} from 'react-bootstrap';
+import { useSearchParams } from 'react-router-dom';
 
 const ProductAll = () => {
 
   const [productList,setProductList] = useState([]);
-  
+  const [query, setQuery] = useSearchParams();
+
   const getProducts= async ()=>{
-    let url=` http://localhost:3004/products/`
+    let keyword = query.get("q") || "";
+    let url=`https://my-json-server.typicode.com/BryanKang09/json-server/products?q=${keyword}`;
+
     let response = await fetch(url);
     let data = await response.json();
+      
     setProductList(data);
+
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     getProducts();
-  },[]);
+  }, [query]);
 
   return (
     <div>

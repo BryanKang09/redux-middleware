@@ -2,14 +2,28 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const menuList = ['Woman','Men','Kids','Shoes','Bags']
+    const navigate = useNavigate()
+    const goToLogin = () => {
+        navigate("/login");
+    }
+    const search = (e) => {
+        if (e.key==="Enter"){
+            console.log ("keysss",e.key)
+            let keyword = e.target.value
+            console.log(keyword)
+            navigate (`?q=${keyword}`);
+        }
+        
+    }
   return (
     <>
-        <div className='login-button'>
+        <div className='login-button' onClick={goToLogin}>
             <FontAwesomeIcon icon={faUser} />
-            <div>Login</div>
+            <div >Login</div>
         </div>
 
         <div className='logo'>
@@ -21,8 +35,9 @@ const Navbar = () => {
                     {menuList.map(menu =><li>{menu}</li> )}
             </li>
             <div className='search-box'>                
-                <input type="text" className='search-input'></input>
+                
                 <FontAwesomeIcon icon={faSearch} />
+                <input type="text" onKeyPress={(e)=>search(e)} className='search-input'></input>
             </div>
         </div>
 
