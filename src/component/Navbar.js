@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
 
         <div className='logo'>
-            <img width ="300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1000px-Zara_Logo.svg.png" />
+            <img width ="300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1000px-Zara_Logo.svg.png" alt="Zara"  />
         </div>
         
         <div className='menu-area'>

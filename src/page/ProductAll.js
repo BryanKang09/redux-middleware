@@ -14,7 +14,7 @@ const ProductAll = () => {
 
     let response = await fetch(url);
     let data = await response.json();
-      
+
     setProductList(data);
 
   }

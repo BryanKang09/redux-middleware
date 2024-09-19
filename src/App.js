@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import ProductAll from './page/ProductAll';
 import Login from './page/Login';
-import ProductDetail from './page/ProductDetail';
+// import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import { useState,useEffect } from 'react';
 import PrivateRouter from './route/PrivateRouter';

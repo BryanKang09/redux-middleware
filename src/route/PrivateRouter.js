@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductAll from '../page/ProductAll'
+// import ProductAll from '../page/ProductAll'
 import ProductDetail from '../page/ProductDetail'
 import { Navigate } from 'react-router-dom';
 
